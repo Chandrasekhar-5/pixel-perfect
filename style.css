@@ -1,70 +1,369 @@
-    *{
-      box-sizing:border-box}
-    html,
-    
-    body{
-       height: 100%;
-       margin:0;
-       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-       color: var(--text);
-       background: var(--bg);
-       background-color: #212121;
-    }
-    
-    .container{
-        max-width: var(--container);
-        margin-inline: auto;
-        justify-content: space-evenly;
-    }
-        
-    header{
-        position: sticky;
-        top: 0;
-        padding: 15px 0px;
-        background: #212121;
-        color: #b0bec5;
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-        z-index: 50;}
-        
-    .nav{
-        display: flex;
-        align-items: center;
-        gap: 30px;
+:root {
+  --text: #d4d4d8;
+  --bg: #161616;
+  --border: #333;
+  --cta-ghost: #2c2c2c;
+  --cta: #4CAF50;
+  --cta-contrast: #fff;
+  --container: 1200px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #111111;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 15px 0;
+  background: #161616;
+  color: var(--text);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: 0 15px;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandName {
+  font-size: 25px;
+  letter-spacing: -0.01em;
+}
+
+
+.brandLogo{
+  display: none;
+  width: 28px;
+  height: 28px;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 5px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 12px 18px;
+  border: 1px solid #27272a;
+  background: transparent;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+
+.btn.primary {
+  background: var(--cta);
+  color: var(--cta-contrast);
+  border-color: var(--cta);
+}
+
+.btn:hover {
+  border: 1px solid #71717a;
+}
+
+/*mobile-view*/
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; 
+  }
+
+  .brandLogo {
+    display: inline-flex; 
+    color: greenyellow;
+  }
+  
+  .btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .btn::after {
+    content: "Try Flair AI";
+  }
+  .btn {
+    font-size: 0; 
+  }
+  .btn::after {
+    font-size: 16px; 
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+  }
+}
+
+/* intro */
+.box{
+  position: relative;
+  width: 100%;
+}
+.box {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 85px;
+  font-weight: 300;
+  line-height: 120px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+@media ( max-width: 768px){
+   .box {
+     font-size: 50px;
+     line-height: 60px;
+   }
+}
+
+.scroll{
+  margin-top: -80px;
+  color: #84cc16;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  vertical-align: middle;
+}
+.scroll::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.wrapper{
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .item{
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #84cc16;
+}
+.wrapper{
+  animation: wordScroll 10s infinite ease-in-out;
+}
+
+@keyframes wordScroll {
+            0% { transform: translateY(0); }
+            20% { transform: translateY(-120px); }
+            40% { transform: translateY(-240px); }
+            60% { transform: translateY(-360px); }
+            80% { transform: translateY(-480px); }
+            100% { transform: translateY(-600px); }
         }
-        
-    .brandName{
-        font-size: 25px;
-        letter-spacing: -.01em;}
-        
-    .nav a{
-        color:var(--text);
-        text-decoration:none;
-        font-weight:500;
-        padding: 10px;
-        font-size: 15px;
-    }
-        
-    .btn{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        gap:5px;
-        border-radius:999px;
-        padding:12px 18px;
-        border:1px solid var(--border);
-        background:var(--cta-ghost);
-        font-weight:600;}
-        
-    .btn.primary{
-        background:var(--cta);
-        color:var(--cta-contrast);
-        border-color:var(--cta);}
-        
-    .btn:hover{
-        transform:translateY(-1px);}
       
-    @media ( max-width: 768px){
-       .nav{
-           display: none;}
-    }
+  .small{
+    font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .sub{
+    padding: 10px;
+    border-radius: 5px;
+    color: #d4d4d8;
+    border: 1px solid #27272a;
+    background: transparent;
+  }
+  .sub1{
+    background: #84cc16;
+    box-shadow: 0 0 12px 0 #84cc16;
+    color: #18181b !important;
+    border: none !important;
+  }
+  
+  .computer{
+    width: 100%;
+    margin: 10px 0px;
+    border: none;
+  }
+          .comparison-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: #141414;
+            margin: 10px;
+            border: 1px solid #1c1c1d;
+            border-radius: 10px;
+        }
+        .comparison-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .comparison-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .comparison-table th {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .comparison-table .feature {
+            font-size: 16px;
+        }
+        .comparison-table .feature small {
+            display: block;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .check {
+            color: #00ff00;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .cross {
+            color: #666;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .banner {
+            background: url('public (2).jpeg') no-repeat center center;
+            background-size: cover;
+            border-radius: 30px;
+            height: 480px;
+            width: 100%;
+            text-align: left;
+            padding: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .design {
+          font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+         display: flex;
+         font-size: 80px;
+         color: #ffffff;
+         width: 100%;
+         font-weight: 300;
+         text-decoration: none;
+         padding: 20px 40px;
+         margin: 0;
+         cursor: pointer;
+        }
+        .get-started {
+          margin-top: 150px;
+          margin-left: 500px;
+          cursor: pointer;
+          display: flex;
+          background-color: transparent;
+          color: #d4d4d8;
+          font-size: 40px;
+          padding: 20px 40px;
+          border-radius: 80px;
+          border: 1px solid;
+          font-weight: 300;
+        }
+        footer {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        footer h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }

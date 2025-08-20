@@ -1,30 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flair.ai pixel-perfect clone</title>
-  <link rel = "stylesheet" href = "style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://flair.ai/"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Flair.ai"/>
+  <meta property="og:url" content="https://flair.ai/"/><meta property="og:title" content="AI Product Photo Generator &amp; Editor | Create E-Commerce Images | Flair.ai"/>
+  <meta property="og:description" content="Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."/>
+  <meta property="og:image" content="https://flair.ai/cdn-cgi/imagedelivery/i1XPW6iC_chU01_6tBPo8Q/27e80a51-e8fc-4197-4a9a-9d422bf1a200/public"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@flairAI_"/>
+  <meta name="twitter:creator" content="@flairAI_"/>
+  <meta name="twitter:title" content="AI Product Photo Generator &amp; Editor | Create E-Commerce Images"/>
+  <meta name="twitter:description" content="Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."/>
+  <meta name="twitter:image" content="https://flair.ai/cdn-cgi/imagedelivery/i1XPW6iC_chU01_6tBPo8Q/27e80a51-e8fc-4197-4a9a-9d422bf1a200/public"/>
+  <meta name="twitter:url" content="https://flair.ai/"/>
+  <meta name="robots" content="index,follow"/>
+  <meta name="theme-color" content="#84CC16"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="mask-icon" href="/favicon.svg" color="#84CC16"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="next-head-count" content="27"/>
+  <link rel="preload" href="/_next/static/media/ec9107400f020d32-s.p.woff" as="font" type="font/woff" crossorigin="anonymous" data-next-font="size-adjust"/>
+  <link rel="preload" href="/_next/static/media/db5fea07dc596642-s.p.woff" as="font" type="font/woff" crossorigin="anonymous" data-next-font="size-adjust"/>
+  <link rel="preload" href="/_next/static/media/4cbb41122a86caae-s.p.woff" as="font" type="font/woff" crossorigin="anonymous" data-next-font="size-adjust"/>
+  <script id="rewardful-queue" data-nscript="beforeInteractive">(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');</script>
+  <link rel="preload" href="/_next/static/css/860aff40eace10fe.css" as="style" crossorigin=""/>
+  <link rel="stylesheet" href="/_next/static/css/860aff40eace10fe.css" crossorigin="" data-n-g=""/>
+  <link rel="preload" href="/_next/static/css/0bf2aaf757553eb3.css" as="style" crossorigin=""/>
+  <link rel="stylesheet" href="/_next/static/css/0bf2aaf757553eb3.css" crossorigin="" data-n-p=""/>
+  <noscript data-n-css=""></noscript>
+  <script defer="" crossorigin="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
+  <script src="/_next/static/chunks/webpack-b8f8d6679aaa5f42.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/framework-5429a50ba5373c56.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/main-0300fb2f4af70e72.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/pages/_app-ef824f5f5f262313.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/ee9ce975-703639574b6d551e.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/529-b66a790f3f1731a2.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/588-c0b26be3c615da00.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/112-320bd57087882b1a.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/139-e31f60fb947ecf4a.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/chunks/pages/index-1c4cc409ffb4ab2c.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/LJRJe3HtVe28TymgOEkBD/_buildManifest.js" defer="" crossorigin=""></script>
+  <script src="/_next/static/LJRJe3HtVe28TymgOEkBD/_ssgManifest.js" defer="" crossorigin=""></script>
 </head>
-
 <body>
-        <!-- Header -->
+
+  <!-- Header -->
   <header>
-    <div class= "container nav">
-      <div class= "brandName">Flair.ai</div>
-       <nav class= "nav" aria-label="Primary">
-        <a href= "#features">Features ▼ </a>
-        <a href= "#pricing">Pricing</a>
-        <a href= "#enterprise">Enterprise</a>
-        <a href= "#gallery">Community Gallery</a>
-        <a href = "#resources">Resources ▼</a>
+  
+    <div class="container navbar">
+      <div class = "logo-container">
+        <svg class="brandLogo" width="20" height="20" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M74.4382 512H101.382C145.501 512 184.758 484.003 199.13 442.291C201.443 435.578 196.456 428.584 189.355 428.584H74.4382V512Z" fill="currentColor"></path>
+              <path d="M104.389 171.146H73V90.6067H167.596C188.629 90.6067 207.532 77.771 215.29 58.2212C229.236 23.0755 263.219 0 301.031 0H439.742V86.2921H232.502C212.533 86.2921 194.501 98.2355 186.71 116.621C172.705 149.675 140.287 171.146 104.389 171.146Z" fill="currentColor"></path><path d="M105.827 343.73H74.4382V263.191H169.034C190.067 263.191 208.97 250.355 216.728 230.805C230.675 195.66 264.657 172.584 302.469 172.584H418.169V258.876H233.94C213.971 258.876 195.939 270.82 188.149 289.206C174.143 322.259 141.726 343.73 105.827 343.73Z" fill="currentColor"></path></svg>
+      <!-- Brand -->
+      <div class="brand">
+        <span class="brandName">Flair.ai</span>
+       </div>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features ▼</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#enterprise">Enterprise</a>
+        <a href="#gallery">Community Gallery</a>
+        <a href="#resources">Resources ▼</a>
       </nav>
+      
+      
+      <!-- CTA Button -->
       <a class="btn" href="#try">Try Flair AI for free</a>
     </div>
   </header>
+  
+  <!-- intro-->
+    <section class = "box">
+       <p>The AI design tool for</p>
+     
+       <span class = "scroll">product
+            <div class = "wrapper">
+              <div class = "item">photoshoots</div>
+              <div class = "item">videos</div>
+              <div class = "item">marketing</div>
+              <div class = "item">advertising</div>
+              <div class = "item">content</div>
+            </div>
+        </span>
+    </section>
+    <section class = "small">
+      <p>Build stunning AI product content with your team in real- time</p>
+    </section>
+    <div class = "buttons">
+    <button class = "sub sub1">Get Started-It's Free</button>
+    <button class = "sub">Book a Demo</button>
+    </div>
+    
+    <img class = "computer" src = "computer.png" alt = "computer">
+        <section class="comparison-section">
+        <h2>How does Flair compare?</h2>
+        <p>See how Flair stacks up against other AI product photography platforms.</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>Flair</th>
+                    <th>Pebblely</th>
+                    <th>Botika</th>
+                    <th>Claid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="feature">Custom model image generation <small>Create images with models trained on your products</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">On model product photography <small>Generate images of products on models</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Generate image variations on product photography</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Background image regeneration</td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Video generation <small>Create product videos with AI</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Ad generation <small>Generate advertising creative automatically</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">AI editing tools <small>Edit and enhance images with AI tools</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Brand asset management <small>Manage your brand assets in one place</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Human builder <small>Create and customize human models</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Custom background and assets <small>Add your own backgrounds and props</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">Team collaboration <small>Work with your team in real time</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                </tr>
+                <tr>
+                    <td class="feature">API access <small>API for integration</small></td>
+                    <td><span class="check">✓</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="cross">✗</span></td>
+                    <td><span class="check">✓</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
+    <div class="banner">
+        <a href = "#" class = "design">Design with Flair</a>
+        <button class="get-started">Get Started</button>
+    </div>
+
+    <footer>
+        <div class="column">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Enterprise</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Flair API</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Bulk Key Features</h4>
+            <ul>
+                <li><a href="#">Bulk Generation</a></li>
+                <li><a href="#">On Model Photography</a></li>
+                <li><a href="#">AI Product Photography</a></li>
+                <li><a href="#">AI Marketing & Ads</a></li>
+                <li><a href="#">AI Human Builder</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Product Categories</h4>
+            <ul>
+                <li><a href="#">AI Beauty</a></li>
+                <li><a href="#">AI Consumer Packaged Goods</a></li>
+                <li><a href="#">AI Jewelry</a></li>
+                <li><a href="#">AI Fashion Models</a></li>
+                <li><a href="#">AI Furniture</a></li>
+                <li><a href="#">AI Technology</a></li>
+                <li><a href="#">AI Handbags</a></li>
+                <li><a href="#">AI Food</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Editing Tools</h4>
+            <ul>
+                <li><a href="#">Regenerate Product</a></li>
+                <li><a href="#">Magic Erase</a></li>
+                <li><a href="#">Upscale</a></li>
+                <li><a href="#">Virtual On</a></li>
+                <li><a href="#">Enhance Image Resolution</a></li>
+                <li><a href="#">Generate Variations</a></li>
+                <li><a href="#">Extend Image Dimensions</a></li>
+                <li><a href="#">View all tools</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
-
 </html>
