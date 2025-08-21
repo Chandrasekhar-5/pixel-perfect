@@ -75,7 +75,7 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .nav-links a {
@@ -120,36 +120,6 @@ header {
   border: 1px solid #71717a;
 }
 
-/*mobile-view*/
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; 
-  }
-
-  .brandLogo {
-    display: inline-flex; 
-    color: greenyellow;
-  }
-  
-  .btn {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-  }
-
-  .btn::after {
-    content: "Try Flair AI";
-  }
-  .btn {
-    font-size: 0; 
-  }
-  .btn::after {
-    font-size: 16px; 
-    font-weight: bold;
-    border: none;
-    padding: 5px 10px;
-  }
-}
-
 /* intro */
 .box{
   position: relative;
@@ -162,13 +132,6 @@ header {
   line-height: 120px;
   text-align: center;
   letter-spacing: -1px;
-}
-
-@media ( max-width: 768px){
-   .box {
-     font-size: 50px;
-     line-height: 60px;
-   }
 }
 
 .scroll{
@@ -411,3 +374,194 @@ header {
             color: #aaa;
             border-top: 1px solid #333;
         }
+        
+            /* Mobile Responsiveness */
+    @media (max-width: 1200px) {l
+      .container {
+        padding: 0 30px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .box {
+        font-size: 70px;
+        line-height: 100px;
+      }
+      
+      .design {
+        font-size: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; 
+      }
+
+      .brandLogo {
+        display: inline-flex; 
+        color: greenyellow;
+      }
+      
+      .btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+      }
+
+      .btn::after {
+        content: "Try Flair AI";
+      }
+      
+      .btn {
+        font-size: 0; 
+      }
+      
+      .btn::after {
+        font-size: 14px; 
+        font-weight: bold;
+      }
+      
+      .box {
+        font-size: 50px;
+        line-height: 70px;
+      }
+      
+      .scroll {
+        margin-top: -50px;
+      }
+      
+      .wrapper {
+        height: 350px;
+      }
+      
+      .wrapper .item {
+        height: 70px;
+      }
+      
+      @keyframes wordScroll {
+        0% { transform: translateY(0); }
+        20% { transform: translateY(-70px); }
+        40% { transform: translateY(-140px); }
+        60% { transform: translateY(-210px); }
+        80% { transform: translateY(-280px); }
+        100% { transform: translateY(-350px); }
+      }
+      
+      .small {
+        font-size: 24px;
+      }
+      
+        .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .sub{
+    padding: 10px;
+    border-radius: 5px;
+    color: #d4d4d8;
+    border: 1px solid #27272a;
+    background: transparent;
+  }
+  .sub1{
+    background: #84cc16;
+    box-shadow: 0 0 12px 0 #84cc16;
+    color: #18181b !important;
+    border: none !important;
+  }
+  .banner{
+    background: url('public (1).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+      .design {
+        font-size: 40px;
+      }
+        .banner {
+    background: url('public (1).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+      footer {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .box {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      
+      .scroll {
+        margin-top: -40px;
+      }
+      
+      .wrapper {
+        height: 250px;
+      }
+      
+      .wrapper .item {
+        height: 50px;
+      }
+      
+      @keyframes wordScroll {
+        0% { transform: translateY(0); }
+        20% { transform: translateY(-50px); }
+        40% { transform: translateY(-100px); }
+        60% { transform: translateY(-150px); }
+        80% { transform: translateY(-200px); }
+        100% { transform: translateY(-250px); }
+      }
+      
+      .small {
+        font-size: 20px;
+      }
+      
+      .comparison-section {
+        padding: 40px 15px;
+      }
+      
+      .comparison-section h2 {
+        font-size: 28px;
+      }
+      
+      .comparison-section p {
+        font-size: 16px;
+      }
+        .banner{
+    background: url('public (1).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+      .design {
+        font-size: 32px;
+        text-align: center;
+      }
+      
+      .get-started {
+        font-size: 18px;
+        padding: 12px 30px;
+      }
+      
+      .banner {
+        padding: 40px 20px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .box {
+        font-size: 32px;
+        line-height: 40px;
+      }
+        .banner{
+    background: url('public (1).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+      .design {
+        font-size: 28px;
+      }
+    }
