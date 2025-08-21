@@ -249,117 +249,161 @@ header {
     margin: 10px 0px;
     border: none;
   }
-          .comparison-section {
-            padding: 40px 20px;
-            text-align: center;
-            background: #141414;
-            margin: 10px;
-            border: 1px solid #1c1c1d;
-            border-radius: 10px;
-        }
-        .comparison-section h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        .comparison-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #333;
-        }
-        .comparison-table th {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .comparison-table .feature {
-            font-size: 16px;
-        }
-        .comparison-table .feature small {
-            display: block;
-            font-size: 14px;
-            color: #aaa;
-        }
-        .check {
-            color: #00ff00;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .cross {
-            color: #666;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .banner {
-            background: url('public (2).jpeg') no-repeat center center;
-            background-size: cover;
-            border-radius: 30px;
-            height: 480px;
-            width: 100%;
-            text-align: left;
-            padding: 50px;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .design {
-          font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-         display: flex;
-         font-size: 80px;
-         color: #ffffff;
-         width: 100%;
-         font-weight: 300;
-         text-decoration: none;
-         padding: 20px 40px;
-         margin: 0;
-         cursor: pointer;
-        }
-        .get-started {
-          margin-top: 150px;
-          margin-left: 500px;
-          cursor: pointer;
-          display: flex;
-          background-color: transparent;
-          color: #d4d4d8;
-          font-size: 40px;
-          padding: 20px 40px;
-          border-radius: 80px;
-          border: 1px solid;
-          font-weight: 300;
-        }
-        footer {
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        footer .column {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        footer h4 {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-        footer ul li a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 10px;
-        }
+    .comparison-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #141414;
+      margin: 40px 0;
+      border: 1px solid #1c1c1d;
+      border-radius: 10px;
+    }
+
+    .comparison-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .comparison-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      min-width: 800px;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+
+    .comparison-table th {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .comparison-table .feature {
+      font-size: 16px;
+    }
+
+    .comparison-table .feature small {
+      display: block;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .check {
+      color: #00ff00;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .cross {
+      color: #666;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .banner {
+      background: url('public (2).jpeg') no-repeat center center;
+      background-size: cover;
+      border-radius: 20px;
+      height: auto;
+      width: 100%;
+      text-align: center;
+      padding: 60px 30px;
+      margin: 60px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('public (2).jpeg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .design {
+      display: inline-block;
+      font-size: 60px;
+      color: #ffffff;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 20px 0;
+      margin: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .get-started {
+      margin-top: 30px;
+      cursor: pointer;
+      background-color: transparent;
+      color: #d4d4d8;
+      font-size: 20px;
+      padding: 15px 40px;
+      border-radius: 50px;
+      border: 1px solid #d4d4d8;
+      font-weight: 300;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+    footer {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #0a0a0a;
+      border-top: 1px solid #222;
+    }
+
+    footer .column {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    footer h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #f1f1f1;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    footer ul li a:hover {
+      color: var(--primary-green);
+    }
         .copyright {
             text-align: center;
             padding: 20px;
